@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Importadora Sur Alpine. Repuestos y autopartes para tu vehículo.">
+<title>Importadora Sur Alpine | Repuestos y autopartes</title>
+
+<style>
+:root {
+  --azul: #0754b8;
+  --azul-oscuro: #062d68;
+  --azul-profundo: #041d45;
+  --rojo: #e5232d;
+  --blanco: #ffffff;
+  --gris: #f2f6fc;
+  --texto: #172b4d;
+  --sombra: 0 12px 34px rgba(4,29,69,.13);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--texto);
+  background: #f5f8fd;
+  line-height: 1.55;
+}
+
+a {
+  text-decoration: none;
+}
+
+.topbar {
+  background: var(--azul-profundo);
+  color: white;
+  text-align: center;
+  padding: 9px;
+  font-size: 13px;
+  letter-spacing: .3px;
+}
+
+header {
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  box-shadow: 0 4px 18px rgba(0,0,0,.08);
+}
+
+.nav {
+  max-width: 1180px;
+  margin: auto;
+  padding: 12px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.brand img {
+  width: 75px;
+  height: 75px;
+  object-fit: contain;
+}
+
+.brand strong {
+  display: block;
+  color: var(--azul-oscuro);
+  font-size: 19px;
+  line-height: 1.1;
+}
+
+.brand small {
+  color: #61718b;
+  font-size: 12px;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: var(--azul-oscuro);
+  font-weight: bold;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: var(--rojo);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 13px 20px;
+  border-radius: 999px;
+  font-weight: bold;
+  transition: .2s;
+  box-shadow: 0 7px 18px rgba(0,0,0,.12);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-red {
+  background: var(--rojo);
+  color: white;
+}
+
+.btn-blue {
+  background: var(--azul);
+  color: white;
+}
+
+.btn-white {
+  background: white;
+  color: var(--azul-oscuro);
+}
+
+/* PORTADA */
+
+.hero {
+  background: radial-gradient(
+    circle at 80% 25%,
+    #2879e6 0,
+    #0b55b4 28%,
+    #062d68 68%,
+    #041d45 100%
+  );
+  color: white;
+  overflow: hidden;
+}
+
+.hero-inner {
+  max-width: 1180px;
+  margin: auto;
+  padding: 75px 22px;
+  display: grid;
+  grid-template-columns: 1.25fr .75fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.eyebrow {
+  display: inline-block;
+  background: rgba(255,255,255,.14);
+  border: 1px solid rgba(255,255,255,.25);
+  padding: 7px 14px;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.hero h1 {
+  font-size: clamp(35px,5vw,58px);
+  line-height: 1.05;
+  margin: 20px 0;
+}
+
+.hero h1 span {
+  color: #ff525b;
+}
+
+.hero p {
+  font-size: 17px;
+  color: #e7efff;
+  max-width: 620px;
+  margin-bottom: 28px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.hero-logo {
+  justify-self: center;
+  background: white;
+  padding: 15px;
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  box-shadow: 0 22px 60px rgba(0,0,0,.3);
+}
+
+.hero-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+/* FRANJA DE SERVICIOS */
+
+.trust-strip {
+  background: white;
+  max-width: 1100px;
+  margin: -25px auto 0;
+  border-radius: 16px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 15px;
+  text-align: center;
+  box-shadow: var(--sombra);
+  position: relative;
+}
+
+.trust-strip strong {
+  display: block;
+  color: var(--azul-oscuro);
+}
+
+.trust-strip span {
+  font-size: 13px;
+  color: #6a7890;
+}
+
+/* SECCIONES */
+
+section {
+  padding: 68px 22px;
+}
+
+.container {
+  max-width: 1180px;
+  margin: auto;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.section-heading .kicker {
+  color: var(--rojo);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.section-heading h2 {
+  font-size: clamp(27px,4vw,39px);
+  color: var(--azul-oscuro);
+  margin: 7px 0;
+}
+
+.section-heading p {
+  color: #65738b;
+  max-width: 680px;
+  margin: auto;
+}
+
+/* BENEFICIOS */
+
+.benefits {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 18px;
+}
+
+.benefit {
+  background: white;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: var(--sombra);
+  border-top: 4px solid var(--azul);
+}
+
+.benefit .ico {
+  font-size: 30px;
+}
+
+.benefit h3 {
+  color: var(--azul-oscuro);
+}
+
+.benefit p {
+  color: #68758a;
+  font-size: 14px;
+}
+
+/* CATALOGO */
+
+.catalog-section {
+  background: #eaf1fb;
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 9px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+
+.filter {
+  border: 1px solid #c8d7ed;
+  background: white;
+  color: var(--azul-oscuro);
+  padding: 9px 15px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.filter.active,
+.filter:hover {
+  background: var(--azul);
+  color: white;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4,minmax(0,1fr));
+  gap: 18px;
+}
+
+.product-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: var(--sombra);
+  transition: .2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-image {
+  height: 185px;
+  background: linear-gradient(145deg,#f3f7fd,#e2ebf8);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 12px;
+}
+
+.product-info {
+  padding: 17px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.tag {
+  font-size: 10px;
+  text-transform: uppercase;
+  color: var(--azul);
+  font-weight: 900;
+}
+
+.product-info h3 {
+  font-size: 17px;
+  margin: 7px 0;
+  color: var(--azul-oscuro);
+}
+
+.product-info p {
+  font-size: 13px;
+  color: #6b7890;
+  flex: 1;
+}
+
+.mini-wa {
+  font-size: 12px;
+  font-weight: bold;
+  color: #087c45;
+  border-top: 1px solid #edf1f7;
+  padding-top: 12px;
+}
+
+/* MARCAS */
+
+.brands {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.brand-pill {
+  background: white;
+  border: 1px solid #e0e8f4;
+  border-radius: 12px;
+  padding: 18px 28px;
+  font-size: 19px;
+  font-weight: 900;
+  color: var(--azul-oscuro);
+  box-shadow: 0 6px 18px rgba(4,29,69,.07);
+}
+
+/* CONTACTO */
+
+.cta {
+  background: linear-gradient(
+    110deg,
+    var(--azul-oscuro),
+    var(--azul)
+  );
+  color: white;
+  text-align: center;
+}
+
+.cta h2 {
+  font-size: clamp(28px,4vw,40px);
+  margin: 0 0 10px;
+}
+
+.cta p {
+  color: #dce9ff;
+  margin: 0 auto 24px;
+  max-width: 650px;
+}
+
+/* PIE DE PAGINA */
+
+footer {
+  background: #04172f;
+  color: #d8e4f7;
+  padding: 32px 22px;
+  text-align: center;
+}
+
+footer img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  background: white;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+footer p {
+  font-size: 13px;
+  color: #aabbd5;
+}
+
+/* WHATSAPP FLOTANTE */
+
+.float-wa {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 30;
+  background: #16bd65;
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 29px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.25);
+  border: 3px solid white;
+}
+
+/* CELULARES */
+
+@media(max-width:900px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-logo {
+    grid-row: 1;
+    width: 220px;
+    height: 220px;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(3,minmax(0,1fr));
+  }
+}
+
+@media(max-width:650px) {
+  .nav {
+    padding: 9px 14px;
+  }
+
+  .brand img {
+    width: 57px;
+    height: 57px;
+  }
+
+  .brand strong {
+    font-size: 15px;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .trust-strip {
+    margin: -20px 14px 0;
+    grid-template-columns: 1fr;
+  }
+
+  section {
+    padding: 52px 15px;
+  }
+
+  .benefits {
+    grid-template-columns: 1fr;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    gap: 11px;
+  }
+
+  .product-image {
+    height: 140px;
+  }
+
+  .product-info {
+    padding: 12px;
+  }
+
+  .product-info h3 {
+    font-size: 15px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+  IMPORTADORA SUR ALPINE · REPUESTOS Y AUTOPARTES
+</div>
+
+<header>
+  <div class="nav">
+
+    <a class="brand" href="#inicio">
+      <img src="LOGO(1).JPG" alt="Logo Importadora Sur Alpine">
+      <span>
+        <strong>IMPORTADORA<br>SUR ALPINE</strong>
+        <small>Repuestos y autopartes</small>
+      </span>
+    </a>
+
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#servicios">Nosotros</a>
+      <a href="#catalogo">Repuestos</a>
+      <a href="#marcas">Marcas</a>
+    </nav>
+
+    <a class="btn btn-red"
+       href="https://wa.me/573107936237?text=Hola,%20quiero%20asesoria%20de%20repuestos"
+       target="_blank">
+       Asesoría WhatsApp
+    </a>
+
+  </div>
+</header>
+
+<main>
+
+<!-- PORTADA -->
+
+<section class="hero" id="inicio">
+  <div class="hero-inner">
+
+    <div>
+      <span class="eyebrow">TU ALIADO EN REPUESTOS</span>
+
+      <h1>
+        La pieza que buscas,
+        <span>la encuentras aquí.</span>
+      </h1>
+
+      <p>
+        En Importadora Sur Alpine te ayudamos a encontrar
+        repuestos y autopartes para tu vehículo.
+        Escríbenos y recibe asesoría personalizada.
+      </p>
+
+      <div class="hero-actions">
+
+        <a class="btn btn-red"
+           href="https://wa.me/573107936237?text=Hola,%20necesito%20ayuda%20para%20encontrar%20un%20repuesto"
+           target="_blank">
+           💬 Consultar con un asesor
+        </a>
+
+        <a class="btn btn-white" href="#catalogo">
+          Ver repuestos ↓
+        </a>
+
+      </div>
+    </div>
+
+    <div class="hero-logo">
+      <img src="LOGO(1).JPG" alt="Importadora Sur Alpine">
+    </div>
+
+  </div>
+</section>
+
+<!-- SERVICIOS -->
+
+<div class="trust-strip">
+
+  <div>
+    <strong>🔧 Asesoría personalizada</strong>
+    <span>Te ayudamos a identificar tu repuesto</span>
+  </div>
+
+  <div>
+    <strong>🚘 Variedad de repuestos</strong>
+    <span>Consulta por marca y referencia</span>
+  </div>
+
+  <div>
+    <strong>📲 Atención por WhatsApp</strong>
+    <span>Contáctanos directamente</span>
+  </div>
+
+</div>
+
+<section id="servicios">
+
+  <div class="container">
+
+    <div class="section-heading">
+      <span class="kicker">ESTAMOS PARA AYUDARTE</span>
+      <h2>Encuentra el repuesto correcto</h2>
+      <p>
+        Cuéntanos qué vehículo tienes y qué pieza necesitas.
+        Nuestro equipo te orientará.
+      </p>
+    </div>
+
+    <div class="benefits">
+
+      <article class="benefit">
+        <div class="ico">🧰</div>
+        <h3>Amplio catálogo</h3>
+        <p>
+          Repuestos para motor, frenos, suspensión,
+          transmisión, refrigeración y sistema eléctrico.
+        </p>
+      </article>
+
+      <article class="benefit">
+        <div class="ico">🧑‍🔧</div>
+        <h3>Asesoría directa</h3>
+        <p>
+          Envíanos marca, línea, modelo y año de tu vehículo
+          para ayudarte a encontrar la pieza.
+        </p>
+      </article>
+
+      <article class="benefit">
+        <div class="ico">📦</div>
+        <h3>Consulta disponibilidad</h3>
+        <p>
+          Pregunta por precio, existencia y opciones
+          según la referencia que necesitas.
+        </p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- CATALOGO DE REPUESTOS -->
+
+<section class="catalog-section" id="catalogo">
+
+  <div class="container">
+
+    <div class="section-heading">
+      <span class="kicker">CATÁLOGO DE PRODUCTOS</span>
+      <h2>Repuestos que puedes consultar</h2>
+      <p>
+        Explora nuestros productos y consulta directamente
+        con un asesor por WhatsApp.
+      </p>
+    </div>
+
+    <div class="filters">
+
+      <button class="filter active" data-filter="Todos">Todos</button>
+      <button class="filter" data-filter="Motor">Motor</button>
+      <button class="filter" data-filter="Frenos">Frenos</button>
+      <button class="filter" data-filter="Suspensión y dirección">Suspensión</button>
+      <button class="filter" data-filter="Transmisión">Transmisión</button>
+      <button class="filter" data-filter="Sistema eléctrico">Eléctrico</button>
+      <button class="filter" data-filter="Refrigeración">Refrigeración</button>
+      <button class="filter" data-filter="Filtros">Filtros</button>
+      <button class="filter" data-filter="Repuestos varios">Varios</button>
+
+    </div>
+
+    <div class="product-grid" id="productGrid">
+
+      <article class="product-card" data-category="Suspensión y dirección">
+        <div class="product-image">
+          <img src="07_tijeras_y_rotulas(1).png" alt="Tijeras y rótulas">
+        </div>
+        <div class="product-info">
+          <span class="tag">Suspensión</span>
+          <h3>Tijeras y rótulas</h3>
+          <p>Componentes para suspensión y dirección.</p>
+          <a class="mini-wa" href="https://wa.me/573107936237?text=Hola,%20quiero%20consultar%20tijeras%20y%20rotulas" target="_blank">Consultar por WhatsApp ↗</a>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="Sistema eléctrico">
+        <div class="product-image">
+          <img src="11_motor_arranque.png" alt="Motor de arranque">
+        </div>
+        <div class="product-info">
+          <span class="tag">Sistema eléctrico</span>
+          <h3>Motor de arranque</h3>
+          <p>Consulta disponibilidad y referencia.</p>
+          <a class="mini-wa" href="https://wa.me/573107936237?text=Hola,%20quiero%20consultar%20motor%20de%20arranque" target="_blank">Consultar por WhatsApp ↗</a>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="Transmisión">
+        <div class="product-image">
+          <img src="09_kit_embrague(1).png" alt="Kit de embrague">
+        </div>
+        <div class="product-info">
+          <span class="tag">Transmisión</span>
+          <h3>Kit de embrague</h3>
+          <p>Consulta por marca, modelo y año.</p>
+          <a class="mini-wa" href="https://wa.me/573107936237?text=Hola,%20quiero%20consultar%20kit%20de%20embrague" target="_blank">Consultar por WhatsApp ↗</a>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="Motor">
+        <div class="product-image">
+          <img src="17_sensores_motor(1).png" alt="Sensores de motor">
+        </div>
+        <div class="product-info">
+          <span class="tag">Motor</span>
+          <h3>Sensores de motor</h3>
+          <p>Sensores y componentes electrónicos.</p>
+          <a class="mini-wa" href="https://wa.me/573107936237?text=Hola,%20quiero%20consultar%20sensores%20de%20motor" target="_blank">Consultar por WhatsApp ↗</a>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="Motor">
+        <div class="product-image">
+          <img src="19_kit_reparticion(1).png" alt="Kit de repartición">
+        </div>
+        <div class="product-info">
+          <span class="tag">Motor</span>
+          <h3>Kit de repartición</h3>
+          <p>Componentes para mantenimiento del motor.</p>
+          <a class="mini-wa" href="https://wa.me/573107936237?text=Hola,%20quiero%20consultar%20kit%20de%20reparticion" target="_blank">Consultar por WhatsApp ↗</a>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="Sistema eléctrico">
+        <div class="product-image">
+          <img src="13_bateria_automotriz(1).png" alt="Batería automotriz">
+        </div>
+        <div class="product-info">
+          <span class="tag">Sistema eléctrico</span>
+          <h3>Batería automotriz</h3>
+          <p>Baterías para diferentes vehículos.</p>
+          <a class="mini-wa" href="https://wa.me/573107936237?text=Hola,%20quiero%20consultar%20bateria%20automotriz" target="_blank">Consultar por WhatsApp ↗</a>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="Suspensión y dirección">
+        <div class="product-image">
+          <img src="06_espirales_suspension(1).png" alt="Espirales de suspensión">
+        </div>
+        <div class="product-info">
+          <span class="tag">Suspensión</span>
+          <h3>Espirales de suspensión</h3>
+          <p>Confort y estabilidad al conducir.</p>
+          <a class="mini-wa" href="https://wa.me/573107936237?text=Hola,%20quiero%20consultar%20espirales%20de%20suspension" target="_blank">Consultar por WhatsApp ↗</a>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="Suspensión y dirección">
+        <div class="product-image">
+          <img src="08_terminales_direccion(1).png" alt="Terminales de dirección">
+        </div>
+        <div class="product-info">
+          <span class="tag">Dirección</span>
+          <h3>Terminales de dirección</h3>
+          <p>Componentes para el sistema de dirección.</p>
+          <a class="mini-wa" href="https://wa.me/573107936237?text=Hola,%20quiero%20consultar%20terminales%20de%20direccion" target="_blank">Consultar por WhatsApp ↗</a>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="Frenos">
+        <div class="product-image">
+          <img src="04_bomba_freno(1).png" alt="Bomba de freno">
+        </div>
+        <div class="product-info">
+          <span class="tag">Frenos</span>
+          <h3>Bomba de freno</h3>
+          <p>Repuestos para el sistema de frenos.</p>
+          <a class="mini-wa" href="https://wa.me/573107936237?text=Hola,%20quiero%20consultar%20bomba%20de%20freno" target="_blank">Consultar por WhatsApp ↗</a>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="Motor">
+        <div class="product-image">
+          <img src="18_pistones_y_anillos(1).png" alt="Pistones y anillos">
+        </div>
+        <div class="product-info">
+          <span class="tag">Motor</span>
+          <h3>Pistones y anillos</h3>
+          <p>Componentes internos para motor.</p>
+          <a class="mini-wa" href="https://wa.me/573107936237?text=Hola,%20quiero%20consultar%20pistones%20y%20anillos" target="_blank">Consultar por WhatsApp ↗</a>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="Sistema eléctrico">
+        <div class="product-image">
+          <img src="12_alternador.png" alt="Alternador">
+        </div>
+        <div class="product-info">
+          <span class="tag">Sistema eléctrico</span>
+          <h3>Alternador</h3>
+          <p>Consulta precio y referencia.</p>
+          <a class="mini-wa" href="https://wa.me/573107936237?text=Hola,%20quiero%20consultar%20alternador" target="_blank">Consultar por WhatsApp ↗</a>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="Refrigeración">
+        <div class="product-image">
+          <img src="14_radiador.png" alt="Radiador">
+        </div>
+        <div class="product-info">
+          <span class="tag">Refrigeración</span>
+          <h3>Radiador</h3>
+          <p>Refrigeración para el motor.</p>
+          <a class="mini-wa" href="https://wa.me/573107936237?text=Hola,%20quiero%20consultar%20radiador" target="_blank">Consultar por WhatsApp ↗</a>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="Motor">
+        <div class="product-image">
+          <img src="16_bujias_y_bobinas.png" alt="Bujías y bobinas">
+        </div>
+        <div class="product-info">
+          <span class="tag">Motor</span>
+          <h3>Bujías y bobinas</h3>
+          <p>Componentes para el sistema de encendido.</p>
+          <a class="mini-wa" href="https://wa.me/573107936237?text=Hola,%20quiero%20consultar%20bujias%20y%20bobinas" target="_blank">Consultar por WhatsApp ↗</a>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="Transmisión">
+        <div class="product-image">
+          <img src="KIT CLUTCH.JPG" alt="Kit clutch">
+        </div>
+        <div class="product-info">
+          <span class="tag">Transmisión</span>
+          <h3>Kit clutch</h3>
+          <p>Consulta disponibilidad por referencia.</p>
+          <a class="mini-wa" href="https://wa.me/573107936237?text=Hola,%20quiero%20consultar%20kit%20clutch" target="_blank">Consultar por WhatsApp ↗</a>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="Motor">
+        <div class="product-image">
+          <img src="EMPAQUE.JPG" alt="Empaques">
+        </div>
+        <div class="product-info">
+          <span class="tag">Motor</span>
+          <h3>Empaques</h3>
+          <p>Empaques y sellos para motor.</p>
+          <a class="mini-wa" href="https://wa.me/573107936237?text=Hola,%20quiero%20consultar%20empaques" target="_blank">Consultar por WhatsApp ↗</a>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="Filtros">
+        <div class="product-image">
+          <img src="FILTRO AIRE.JPG" alt="Filtro de aire">
+        </div>
+        <div class="product-info">
+          <span class="tag">Filtros</span>
+          <h3>Filtro de aire</h3>
+          <p>Filtración de aire para tu vehículo.</p>
+          <a class="mini-wa" href="https://wa.me/573107936237?text=Hola,%20quiero%20consultar%20filtro%20de%20aire" target="_blank">Consultar por WhatsApp ↗</a>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="Filtros">
+        <div class="product-image">
+          <img src="filtro.JPG" alt="Filtro de aceite">
+        </div>
+        <div class="product-info">
+          <span class="tag">Filtros</span>
+          <h3>Filtro de aceite</h3>
+          <p>Protección y mantenimiento del motor.</p>
+          <a class="mini-wa" href="https://wa.me/573107936237?text=Hola,%20quiero%20consultar%20filtro%20de%20aceite" target="_blank">Consultar por WhatsApp ↗</a>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="Filtros">
+        <div class="product-image">
+          <img src="FILTRO COMBUSTIBLE.JPG" alt="Filtro de combustible">
+        </div>
+        <div class="product-info">
+          <span class="tag">Filtros</span>
+          <h3>Filtro de combustible</h3>
+          <p>Filtración del sistema de combustible.</p>
+          <a class="mini-wa" href="https://wa.me/573107936237?text=Hola,%20quiero%20consultar%20filtro%20de%20combustible" target="_blank">Consultar por WhatsApp ↗</a>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="Refrigeración">
+        <div class="product-image">
+          <img src="BOMBA DE AGUA.JPG" alt="Bomba de agua">
+        </div>
+        <div class="product-info">
+          <span class="tag">Refrigeración</span>
+          <h3>Bomba de agua</h3>
+          <p>Circulación del refrigerante.</p>
+          <a class="mini-wa" href="https://wa.me/573107936237?text=Hola,%20quiero%20consultar%20bomba%20de%20agua" target="_blank">Consultar por WhatsApp ↗</a>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="Suspensión y dirección">
+        <div class="product-image">
+          <img src="AMORTIGUADORES.JPG" alt="Amortiguadores">
+        </div>
+        <div class="product-info">
+          <span class="tag">Suspensión</span>
+          <h3>Amortiguadores</h3>
+          <p>Estabilidad y comodidad al conducir.</p>
+          <a class="mini-wa" href="https://wa.me/573107936237?text=Hola,%20quiero%20consultar%20amortiguadores" target="_blank">Consultar por WhatsApp ↗</a>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="Frenos">
+        <div class="product-image">
+          <img src="121212.JPG" alt="Repuestos de frenos">
+        </div>
+        <div class="product-info">
+          <span class="tag">Frenos</span>
+          <h3>Repuestos de frenos</h3>
+          <p>Consulta por pastillas, discos y otros componentes.</p>
+          <a class="mini-wa" href="https://wa.me/573107936237?text=Hola,%20quiero%20consultar%20repuestos%20de%20frenos" target="_blank">Consultar por WhatsApp ↗</a>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="Motor">
+        <div class="product-image">
+          <img src="ioadkoasod.JPG" alt="Repuestos de motor">
+        </div>
+        <div class="product-info">
+          <span class="tag">Motor</span>
+          <h3>Repuestos de motor</h3>
+          <p>Piezas y componentes para motor.</p>
+          <a class="mini-wa" href="https://wa.me/573107936237?text=Hola,%20quiero%20consultar%20repuestos%20de%20motor" target="_blank">Consultar por WhatsApp ↗</a>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="Repuestos varios">
+        <div class="product-image">
+          <img src="aikdnaidajwid.JPG" alt="Repuestos varios">
+        </div>
+        <div class="product-info">
+          <span class="tag">Varios</span>
+          <h3>Repuestos varios</h3>
+          <p>Pregunta por la pieza que necesitas.</p>
+          <a class="mini-wa" href="https://wa.me/573107936237?text=Hola,%20quiero%20consultar%20por%20un%20repuesto" target="_blank">Consultar por WhatsApp ↗</a>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="Repuestos varios">
+        <div class="product-image">
+          <img src="marcas.JPG" alt="Marcas y referencias">
+        </div>
+        <div class="product-info">
+          <span class="tag">Varios</span>
+          <h3>Marcas y referencias</h3>
+          <p>Consulta por marcas y referencias disponibles.</p>
+          <a class="mini-wa" href="https://wa.me/573107936237?text=Hola,%20quiero%20consultar%20marcas%20y%20referencias" target="_blank">Consultar por WhatsApp ↗</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- MARCAS -->
+
+<section id="marcas">
+
+  <div class="container">
+
+    <div class="section-heading">
+      <span class="kicker">TRABAJAMOS PARA TU VEHÍCULO</span>
+      <h2>Marcas y referencias</h2>
+      <p>
+        Consulta con nuestro equipo la disponibilidad
+        de repuestos para tu marca y modelo.
+      </p>
+    </div>
+
+    <div class="brands">
+      <div class="brand-pill">CHEVROLET</div>
+      <div class="brand-pill">SUZUKI</div>
+      <div class="brand-pill">ISUZU</div>
+      <div class="brand-pill">ACDelco</div>
+      <div class="brand-pill">Y MÁS</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACTO -->
+
+<section class="cta">
+
+  <div class="container">
+
+    <h2>¿No encuentras el repuesto?</h2>
+
+    <p>
+      Envíanos una foto de la pieza o los datos de tu vehículo.
+      Te ayudamos a consultar qué opción necesitas.
+    </p>
+
+    <a class="btn btn-white"
+       href="https://wa.me/573107936237?text=Hola,%20necesito%20asesoria%20para%20un%20repuesto"
+       target="_blank">
+       💬 Hablar con un asesor
+    </a>
+
+  </div>
+</section>
+
+</main>
+
+<!-- PIE DE PAGINA -->
+
+<footer>
+
+  <img src="LOGO(1).JPG" alt="Importadora Sur Alpine">
+
+  <p><strong>IMPORTADORA SUR ALPINE</strong></p>
+
+  <p>Repuestos y autopartes</p>
+
+  <p>Atención y asesoría por WhatsApp</p>
+
+  <p>© 2026 Importadora Sur Alpine. Todos los derechos reservados.</p>
+
+</footer>
+
+<!-- BOTON FLOTANTE WHATSAPP -->
+
+<a class="float-wa"
+   href="https://wa.me/573107936237?text=Hola,%20quiero%20informacion%20de%20repuestos"
+   target="_blank"
+   aria-label="Escribir por WhatsApp">
+   ✆
+</a>
+
+<!-- FILTROS DEL CATALOGO -->
+
+<script>
+document.querySelectorAll('.filter').forEach(button => {
+
+  button.addEventListener('click', () => {
+
+    document.querySelectorAll('.filter').forEach(b => {
+      b.classList.remove('active');
+    });
+
+    button.classList.add('active');
+
+    const selected = button.dataset.filter;
+
+    document.querySelectorAll('.product-card').forEach(card => {
+
+      card.style.display =
+        selected === 'Todos' ||
+        card.dataset.category === selected
+        ? 'flex'
+        : 'none';
+
+    });
+
+  });
+
+});
+</script>
+
+</body>
+</html>
